@@ -11,7 +11,7 @@ source = data.disasters()
 
 chart = alt.Chart(source).mark_circle(opacity = 0.8, stroke = 'black', strokeWidth = 1).encode(
     x = alt.X('Year:O', axis = alt.Axis(labelAngle = 0)),
-    y = alt.X('Entity:N'),
+    y = alt.Y('Entity:N'),
     size = alt.Size('Deaths:Q', scale = alt.Scale(range = [0, 5000]),
                    legend = alt.Legend(title = 'Annual Global Deaths')),
     color = alt.Color('Entity', legend = None)
